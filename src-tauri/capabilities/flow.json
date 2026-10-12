@@ -1,0 +1,8 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "flow-remote",
+  "description": "Google Flow webview ko sirf app commands (flow_report, save_image) chalane ki ijazat",
+  "windows": ["flow"],
+  "remote": { "urls": ["https://flow.google.com/*", "https://*.google.com/*", "https://labs.google/*", "https://flow.google/*"] },
+  "permissions": []
+}
