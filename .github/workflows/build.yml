@@ -1,0 +1,33 @@
+name: Build EXE
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Install Rust dependencies
+        uses: Swatinem/rust-cache@v2
+      - name: Install frontend
+        run: npm install
+      - name: Build Tauri App
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+        with:
+          tagName: v__VERSION__
+          releaseName: "FlowBulk Pro v__VERSION__"
+          releaseBody: "Download EXE"
+          releaseDraft: true
+          prerelease: false
