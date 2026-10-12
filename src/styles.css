@@ -1,0 +1,20 @@
+:root{color-scheme:dark}*{box-sizing:border-box}
+body{margin:0;background:#0b0b10;color:#e8e9f0;font:14px 'Segoe UI',system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:22px}.center{min-height:100vh;display:grid;place-items:center;padding:20px}
+.card{background:#13141b;border:1px solid #23242f;border-radius:14px;padding:18px;margin-bottom:16px}
+.narrow{width:100%;max-width:400px}h1{margin:0;font-size:22px}h2{margin:0 0 12px;font-size:16px}.muted{color:#8b8fa3}.small{font-size:12px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}.brand img,.logo{width:44px;height:44px;border-radius:12px;object-fit:cover}
+.logo{background:linear-gradient(135deg,#f59e0b,#ef7b45);color:#1a1205;font-weight:800;display:grid;place-items:center}
+input,select,textarea{width:100%;background:#0b0b10;border:1px solid #2c2d3a;border-radius:8px;color:inherit;padding:9px;font:inherit;margin-top:5px}
+label{display:block;font-size:12px;color:#a3a6b8;margin-top:12px}
+button{background:#1c1d28;color:inherit;border:1px solid #30323f;border-radius:8px;padding:9px 14px;font:inherit;font-weight:600;cursor:pointer}
+button:hover{background:#252736}button:disabled{opacity:.4;cursor:not-allowed}
+.primary{background:#4f46e5;border-color:#4f46e5}.go{background:#16a34a;border-color:#16a34a}.stop{background:#dc2626;border-color:#dc2626}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.tabs{display:flex;gap:6px;margin-bottom:14px}.tabs button.on{background:#4f46e5;border-color:#4f46e5}
+.err{color:#f87171;margin-top:10px}.ok{background:#12251a;border-left:3px solid #22c55e;padding:10px 12px;border-radius:6px;margin-top:12px}
+.warn{background:#2a2412;border-left:3px solid #f5b942;padding:10px 12px;border-radius:6px;margin-top:12px}
+.status{font-size:17px;font-weight:700}.bar{height:8px;background:#23242f;border-radius:5px;overflow:hidden;margin:10px 0}.bar>div{height:100%;background:#f5b942;transition:width .3s}
+pre{margin:0;background:#07070b;border-radius:8px;padding:10px;height:170px;overflow:auto;font:12px Consolas,monospace;white-space:pre-wrap}
+table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:6px 8px;border-bottom:1px solid #23242f;font-size:13px}
